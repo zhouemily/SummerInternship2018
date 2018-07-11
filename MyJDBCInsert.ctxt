@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MyJDBCInsert
+comment0.text=\n\ Allows\ data\ to\ be\ added\ and\ removed\ from\ the\ database\ named\ test.\n\n\ @author\ Emily\ Zhou\n\ @version\ 7/6/18\n
+comment1.params=
+comment1.target=MyJDBCInsert()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyJDBCInsert\n
+comment2.params=student
+comment2.target=void\ insertRecord(StudentReccord)
+comment2.text=\n\ Imputs\ information\ into\ the\ database\ called\ test.\n
+numComments=3

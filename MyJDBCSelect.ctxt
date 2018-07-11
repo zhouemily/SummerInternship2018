@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MyJDBCSelect
+comment0.text=\n\ DESCRIPTION\n\ \n\ @author\ Emily\ Zhou\n\ @version\ 7/6/18\n
+comment1.params=
+comment1.target=MyJDBCSelect()
+comment1.text=\n\ Constructor\ for\ MyJDBCSelect\n
+comment2.params=studentName
+comment2.target=void\ selectRecord(java.lang.String)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n@param\n
+numComments=3

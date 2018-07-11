@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MyJDBCSelectRunner
+comment0.text=\n\ Runs\ the\ removal\ and\ entry\ of\ data\ in\ the\ database\ tests.\n\n\ @author\ Emily\ Zhou\n\ @version\ 7/6/18\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ method\ that\ runs\ the\ operation.\n
+numComments=2
