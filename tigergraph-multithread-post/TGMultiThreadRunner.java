@@ -12,7 +12,7 @@ import java.util.Random;
  * pass the data to TG writer.
  * 
  * It creates a number of threads to run TG Runnable concurrently which pulls data from
- * TG reader and pass the data to TG writer to post to TG database.cat benchmark.csvfile
+ * TG reader and pass the data to TG writer to post to TG database.
  *
  * The program writes the bench mark number to benchmark.csv file after a run 
  * completes.The benchmark.csv file can be viewed in a csv graph viewer 
@@ -73,8 +73,8 @@ public class TGMultiThreadRunner
         long timeTaken = TGWriterThreadRunnable.getEndTime() - 
                          TGWriterThreadRunnable.getStartTime();
         long recordCount = TGWriterThreadRunnable.getRecordCount();
-        System.out.println("ThreadCount: " + threadCount +",  TimeTaken:"
-            + timeTaken + " ms, " + "RecordCount: " + recordCount);
+        System.out.println("ThreadCount: " + threadCount +", TimeTaken: " + timeTaken + 
+                           " ms, RecordCount: " + recordCount);
         writeBenchMark(threadCount, timeTaken, recordCount);
     }
     
