@@ -52,7 +52,7 @@ public class TGJdbcReader
     /**
      * Constructor for objects of class TGJdbcReader.
      * 
-     * @param Tgjdbc_config the configuration to use
+     * @param tgjdbc_config the configuration to use
      * @throw Exception if fails
      */
     public TGJdbcReader(TGJdbcConfig tgjdbc_config) throws Exception
@@ -123,13 +123,13 @@ public class TGJdbcReader
     {
         return this.rs.next();
     }
-
-    /* return string from a row record */
+    
+    
     /**
-     * Converts a record (JDBC table row data) to string format.
+     * Read next record from ResultSet and convert the record (JDBC table row data) to string format.
      * 
      * @param separator the separator between fields in string format
-     * @return the reccord in string format
+     * @return the reccord in string format or null if no more record
      * @throw Exception if fails
      */
     public synchronized String record2string(char separator) throws Exception 
@@ -153,9 +153,9 @@ public class TGJdbcReader
     }
 
     /**
-     * Converts a record (JDBC table row data) to string format.
+     * Read next record in ResultSet and converts the record (JDBC table row data) to string format.
      * 
-     * @return the reccord in string format
+     * @return the reccord in string format or null if no more record
      * @throw Exception if fails
      */
     public String record2string()  throws Exception 
