@@ -34,7 +34,7 @@ public class JdbcTGWriter
         "&sep=" + tgjdbc_config.tg_separator_url +
         "&eol=" + tgjdbc_config.tg_eol_url;
         this.StrBuf = new StringBuffer();
-        this.force_flush = true;
+        this.force_flush = false;
         System.out.println(this.url);
     }
 
