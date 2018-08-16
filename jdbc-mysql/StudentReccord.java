@@ -1,6 +1,6 @@
 
 /**
- * Student reccords is a student profile that included their name and letter
+ * Student reccord is a student profile that included their name and letter
  * grade.
  *
  * @author Emily Zhou
