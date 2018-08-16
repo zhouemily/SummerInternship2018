@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Runs the selection of record in the database test.
+ * Runs the selection of record in the database table.
  *
  * @author Emily Zhou
  * @version 7/6/18
