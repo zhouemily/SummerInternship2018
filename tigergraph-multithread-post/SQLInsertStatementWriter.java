@@ -6,8 +6,7 @@ import java.io.BufferedWriter;
 import java.util.Random;
 
 /**
- * "This utility class write specified number of SQL INSERT statements to
- * a file.
+ * This utility class write specified number of SQL INSERT statements to a file.
  *
  * @author Emily Zhou
  * @version 8/9/18
@@ -17,7 +16,7 @@ public class SQLInsertStatementWriter
     static String OUT_FILENAME = "out.text";
     static String INSERT_STATEMENT_FORMATTER = "insert into SocialUser values(%d,'Emily%d',%d,%d);";
     /**
-     * Maixn method that runs the operation.
+     * Main method that runs the operation.
      * 
      * @param args null
      * @throw Exception if fails
