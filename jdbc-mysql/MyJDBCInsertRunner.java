@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Runs the entry of data in the database test.
+ * Runs the entry of data in the database table.
  *
  * @author Emily Zhou
  * @version 7/6/18
