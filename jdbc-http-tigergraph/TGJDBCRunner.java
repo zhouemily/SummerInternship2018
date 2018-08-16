@@ -11,6 +11,10 @@ public class TGJDBCRunner
 {
     /**
      * Main method that runs the operation.
+     * 
+     * @param args command line arguments to pass in, expected a file name that contains
+     *        json formatted configurations for accessing JDBC database and TigerGraph
+     * @throw Exception if fails
      */
     public static void main(String[] args) throws Exception
     {
