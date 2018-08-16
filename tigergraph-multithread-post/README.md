@@ -77,5 +77,4 @@ This project uses Java to
  ```
 ## Compile and run 
   You can use either javac or your own IDE.  I used [Bluej](https://www.bluej.org/) for this project.
-  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example.
-  You can change the number of threads when start TGMultiThreadRunner and after each run the benchmark number will be written to file benchmark.csv.
+  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number will be written to file benchmark.csv.
