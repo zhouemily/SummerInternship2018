@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Runs the entry of data in the database tests.
+ * Runs the entry of data in the database test.
  *
  * @author Emily Zhou
  * @version 7/6/18
@@ -9,7 +9,7 @@ public class MyJDBCInsertRunner
 {
     
     /**
-     * Main method that runs the entry of data into the database tests.
+     * Main method that runs the entry of data into the database test.
      */
     public static void main(String[] args) throws Exception
     {
