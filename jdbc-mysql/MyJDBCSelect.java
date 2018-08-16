@@ -2,7 +2,7 @@ import java.sql.*;
 
 /**
  * Allows the data of a chosen student to be retrived from the database
- * named tests.
+ * named test.
  * 
  * @author Emily Zhou
  * @version 7/6/18
