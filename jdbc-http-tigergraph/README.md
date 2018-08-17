@@ -66,7 +66,7 @@ gsql>SELECT count() FROM socialuser
 ```  
 then make the loading job online so that it accepts HTTP POST  
 ```  
-gsql>offline2online load_socialroom  
+gsql>OFFLINE2ONLINE load_socialroom  
 gsql>ls  
 ```  
 ## Compile and run  
