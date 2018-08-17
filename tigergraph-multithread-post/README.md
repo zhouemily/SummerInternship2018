@@ -75,6 +75,10 @@ I used TigerGraph v2.1 for this project.
  gsql>OFFLINE2ONLINE load_socialroom 
  gsql>ls
  ```
+ and the following GSQL statement can be used to truncate a vertex, for example after each bench mark run of posting data to socialuser vertex
+```
+gsql>delete from socialuser
+```
 ## Compile and run 
   You can use either javac or your own IDE.  I used [Bluej](https://www.bluej.org/) for this project.  There are 2 external dependency jar files that you need to add to CLASSPATH
 * mysql connector jar - this comes with MySQL installation
