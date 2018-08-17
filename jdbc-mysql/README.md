@@ -1,3 +1,4 @@
+## What this project does
 This project exercises using JDBC to  
 * Insert and select a record from MySQL database  
   
