@@ -70,7 +70,7 @@ gsql>OFFLINE2ONLINE load_socialroom
 gsql>ls  
 ```  
 ## Compile and run  
-You can use either javac or your own IDE. I used [Bluej](https://www.bluej.org) for this project.  There are 2 external dependency jar files that you need to add to CLASSPATH
+You can use either javac and java commands or your own IDE. I used [Bluej](https://www.bluej.org) for this project.  There are 2 external dependency jar files that you need to add to CLASSPATH
 * mysql connector jar - this comes with MySQL installation
 * [json-simple jar](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple)
 
