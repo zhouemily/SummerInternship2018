@@ -26,7 +26,7 @@ mysql>SELECT COUNT(*) FROM SocialUser;
 TigerGraph [GSQL 101]([https://doc.tigergraph.com/2.1/GSQL-101.html](https://doc.tigergraph.com/2.1/GSQL-101.html)) is a good start point to learn TigerGraph GSQL. The following shows how to create the graph socialroom that used in config.json.  
 After login to gsql shell using TigerGraph GSQL command-line tool  
 ```  
-gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOl, registrationTimestamp STRING)  
+gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOL, registrationTimestamp STRING)  
 gsql>CREATE UNDIRECTED EDGE socialconn (FROM socialuser, TO socialuser)  
 gsql>CREATE GRAPH socialroom (socialuser, socialconn)  
 ```  
