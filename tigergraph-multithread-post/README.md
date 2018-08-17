@@ -32,7 +32,7 @@ I used TigerGraph v2.1 for this project.
   TigerGraph [GSQL 101](https://doc.tigergraph.com/2.1/GSQL-101.html) is a good start point to learn TigerGraph GSQL. The following shows how to create the graph socialroom that used in config.json. 
   After login to gsql shell using TigerGraph GSQL command-line tool
   ```
-  gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOl, registrationTimestamp String)
+  gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOl, registrationTimestamp STRING)
   gsql>CREATE UNDIRECTED EDGE socialconn (FROM  socialuser, TO socialuser)
   gsql>CREATE GRAPH socialroom (socialuser, socialconn)
   ```
@@ -43,17 +43,17 @@ I used TigerGraph v2.1 for this project.
   ```
   socialconn.csv which contains 1 line - the header
   ```
-  socialuser1, socialuser2
+  socialuser1,socialuser2
   ```
   then in gsql shell
   ```
   gsql>USE GRAPH socialroom
   gsql>BEGIN
   gsql>CREATE LOADING JOB load_socialroom FROM GRAPH socialroom {
-  gsql>  DEFINE FILENAME file1="/home/tigergraph/socialuser.csv;
-  gsql>  DEFINE FILENAME file2="/home/tigergraph/socialconn.csv;
+  gsql>  DEFINE FILENAME file1="/home/tigergraph/socialuser.csv";
+  gsql>  DEFINE FILENAME file2="/home/tigergraph/socialconn.csv";
   gsql>
-  gsql>  LOAD file1 TO VERTEX socialuser VALUES ($"uid", $"name", $"isActive", $"registrationTime") USING header="true", separator=",";
+  gsql>  LOAD file1 TO VERTEX socialuser VALUES ($"uid", $"name", $"isActive", $"registrationTimestamp") USING header="true", separator=",";
   gsql>  LOAD file2 TO EDGE socialconn VALUES ($0, $1) USING header="true", separator=",";
   gsql>}
   gsql>END
@@ -72,10 +72,10 @@ I used TigerGraph v2.1 for this project.
  ```
  then make the loading job online so that it accepts HTTP POST
  ```
- gsql>offline2online load_socialroom 
+ gsql>OFFLINE2ONLINE load_socialroom 
  gsql>ls
  ```
 ## Compile and run 
   You can use either javac or your own IDE.  I used [Bluej](https://www.bluej.org/) for this project.
   
-  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number will be written to file benchmark.csv.
+  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number is written to file benchmark.csv.
