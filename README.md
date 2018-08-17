@@ -1,2 +1,5 @@
 This repository contains my 2018 high school Summer Internship projects that I developed at TigerGraph. 
-Please see details in README.md files in individual project directories.
+
+* [TigerGraph multithread post and benchmark](./tigergraph-multithraed-post/README.md)
+* [Transfer data from JDBC database to TigerGraph database using REST API](./jdbc-http-tigergraph/README.md)
+* [Using JDBC access MySQL database](./jdbc-mysql/README.md)
