@@ -21,7 +21,7 @@ I used TigerGraph v2.1 for this project.
   mysql>CREATE TABLE SocialUser (uid VARCHAR(50), name VARCHAR(50), isActive BOOL, registration_timestamp BIGINT);
   mysql>CREATE TABLE SocialConn (fromUser VARCHAR(50), toUser VARCHAR(50));
   ```
-  then run the Java utility program SQLInsertStatementWriter in this project to generate a MySQL INSERT script file out.txt for inserting records to the SoicalUser table.  You can edit this Java file to change the number records, table name, etc. then compile using javac command and run using java command.
+  then run the Java utility program SQLInsertStatementWriter in this project to generate a MySQL INSERT script file out.txt for inserting records to the SoicalUser table.  You can edit this Java file to change the number records, table name, etc. then compile using javac command and run using java command.  
   then run the following in mysql shell
   ```
   mysql>USE tg_src_db;
