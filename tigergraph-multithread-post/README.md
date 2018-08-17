@@ -1,9 +1,9 @@
 ## What this project does
 This project uses Java to
-* read records from relational database, like MySQL, using JDBC
-* write records, using multi-threads, to TigerGraph database as vertices or edges using TigerGraph REST API over HTTP POST method.
-* collect benchmark numbers to a csv file
-* provides a utility class to generate specified number of SQL INSERT statements for populating records to MySQL database table
+* Read records from relational database, like MySQL, using JDBC
+* Write records, using multi-threads, to TigerGraph database as vertices or edges using TigerGraph REST API over HTTP POST method.
+* Collect benchmark numbers to a csv file
+* Provides a utility class to generate specified number of SQL INSERT statements for populating records to MySQL database table
 
 ## Setup 
 * Download and install [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
