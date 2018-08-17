@@ -76,6 +76,8 @@ I used TigerGraph v2.1 for this project.
  gsql>ls
  ```
 ## Compile and run 
-  You can use either javac or your own IDE.  I used [Bluej](https://www.bluej.org/) for this project.
+  You can use either javac or your own IDE.  I used [Bluej](https://www.bluej.org/) for this project.  There are 2 external dependency jar files that you need to add to CLASSPATH
+* mysql connector jar - this comes with MySQL installation
+* [json-simple jar](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple)
   
-  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number is written to file benchmark.csv.
+  The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number is written to file benchmark.csv.   A sample run (on Ubuntu 16.04) with 100 threads for 10000 records to the socialuser vertex in TigerGraph takes less than 2 seconds as shown in the [sample benchmark.csv](./benchmark.csv)
