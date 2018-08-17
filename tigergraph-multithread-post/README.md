@@ -6,11 +6,11 @@ This project uses Java to
 * Provides a utility class to generate specified number of SQL INSERT statements for populating records to MySQL database table
 
 ## Setup 
-* Download and install [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* Download and install [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
 I used Java SE 8 for this project.
-* Download and install [MySQL](https://dev.mysql.com/downloads/mysql/)
+* Download and install [MySQL](https://dev.mysql.com/downloads/mysql/)   
 I used MySQL v5.7 for this project.
-* Download and install [TigerGraph](https://www.tigergraph.com/download/)
+* Download and install [TigerGraph](https://www.tigergraph.com/download/)  
 I used TigerGraph v2.1 for this project. 
 
 ## Create database table and populate data to it
@@ -36,7 +36,7 @@ I used TigerGraph v2.1 for this project.
   gsql>CREATE UNDIRECTED EDGE socialconn (FROM  socialuser, TO socialuser)
   gsql>CREATE GRAPH socialroom (socialuser, socialconn)
   ```
-  then create the loading job, first create 2 files in user tignergraph home directory
+  then create the loading job, first create 2 files in user tigergraph home directory
   socialuser.csv which contains 1 line - the header
   ```
   uid,name,isActive,registrationTimestamp
