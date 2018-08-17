@@ -36,7 +36,7 @@ I used TigerGraph v2.1 for this project.
   gsql>CREATE UNDIRECTED EDGE socialconn (FROM  socialuser, TO socialuser)
   gsql>CREATE GRAPH socialroom (socialuser, socialconn)
   ```
-  then create the loading job, first create 2 files in user tigergraph home directory
+  then create the loading job, first create 2 files in user tigergraph home directory  
   socialuser.csv which contains 1 line - the header
   ```
   uid,name,isActive,registrationTimestamp
