@@ -16,6 +16,6 @@ mysql>USE test;
 mysql>CREATE TABLE grades (name VARCHAR(20), lettergrade VARCHAR(2));  
 ```  
 ## Compile and run  
-You can use either javac or your own IDE. I used [Bluej]([https://www.bluej.org/](https://www.bluej.org/)) for this project.  
+You can use either javac or your own IDE. I used [Bluej](https://www.bluej.org) for this project.  You will need to add mysql connector jar file, which comes with MySQL installation, to CLASSPATH.
 * Run MyJDBCInsertRunner to insert a student record. It will prompt you enter the student name and the letter grade of the student.  
 * Run MyJDBCSelectRunner to select a student record. It will prompt you enter the student name.
