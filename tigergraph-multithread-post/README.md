@@ -7,11 +7,11 @@ This project uses Java to
 
 ## Setup 
 * Download and install [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  I used Java SE 8 for this project.
+I used Java SE 8 for this project.
 * Download and install [MySQL](https://dev.mysql.com/downloads/mysql/)
-  I used MySQL v5.7 for this project.
+I used MySQL v5.7 for this project.
 * Download and install [TigerGraph](https://www.tigergraph.com/download/)
-  I used TigerGraph v2.1 for this project. 
+I used TigerGraph v2.1 for this project. 
 
 ## Create database table and populate data to it
   For example, using MySQL, after login to mysql shell using MySQL command-line tool
@@ -58,7 +58,7 @@ This project uses Java to
   gsql>}
   gsql>END
   ```
- and use following GSQL statements to examine the graph and loading job defined correctly and the number of vertices in the socialuser vertex is 0
+ and use following GSQL statements to examine the graph and loading job defined correctly
  ```
  gsql>ls
  ```
