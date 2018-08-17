@@ -32,7 +32,7 @@ I used TigerGraph v2.1 for this project.
   TigerGraph [GSQL 101](https://doc.tigergraph.com/2.1/GSQL-101.html) is a good start point to learn TigerGraph GSQL. The following shows how to create the graph socialroom that used in config.json. 
   After login to gsql shell using TigerGraph GSQL command-line tool
   ```
-  gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOl, registrationTimestamp STRING)
+  gsql>CREATE VERTEX socialuser(PRIMARY_ID uid INT, name STRING, isActive BOOL, registrationTimestamp STRING)
   gsql>CREATE UNDIRECTED EDGE socialconn (FROM  socialuser, TO socialuser)
   gsql>CREATE GRAPH socialroom (socialuser, socialconn)
   ```
@@ -49,7 +49,7 @@ I used TigerGraph v2.1 for this project.
   ```
   gsql>USE GRAPH socialroom
   gsql>BEGIN
-  gsql>CREATE LOADING JOB load_socialroom FROM GRAPH socialroom {
+  gsql>CREATE LOADING JOB load_socialroom FOR GRAPH socialroom {
   gsql>  DEFINE FILENAME file1="/home/tigergraph/socialuser.csv";
   gsql>  DEFINE FILENAME file2="/home/tigergraph/socialconn.csv";
   gsql>
