@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class SQLInsertStatementWriter
 {
-    static String OUT_FILENAME = "out.text";
+    static String OUT_FILENAME = "out.txt";
     static String INSERT_STATEMENT_FORMATTER = "insert into SocialUser values(%d,'Emily%d',%d,%d);";
     /**
      * Main method that runs the operation.
