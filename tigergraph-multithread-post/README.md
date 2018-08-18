@@ -84,4 +84,4 @@ gsql>DELETE FROM socialuser
 * mysql connector jar - this comes with MySQL installation
 * [json-simple jar](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple)
   
-The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number is written to file benchmark.csv.   Sample runs (on Ubuntu) with 100 threads for 10000 records to the socialuser vertex in TigerGraph takes less than 2 seconds as shown in the [sample benchmark.csv](./benchmark.csv).
+The main TGMultiThreadRunner class expects 1 argument that is the name of the configuration file which is in json format. Please see the config.json file as example. The number of threads can be configured in the configuration file and after each run the benchmark number is written to file benchmark.csv.   Please see [sample benchmark.csv](./benchmark.csv)(on Ubuntu) from sample runs of TGMultiThreadRunner that used 100 threads for 10000 records to the socialuser vertex in TigerGraph.
