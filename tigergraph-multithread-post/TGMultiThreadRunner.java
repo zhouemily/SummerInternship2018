@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.ArrayList; 
+import java.util.ArrayList;
 import java.io.IOException;
 import java.io.FileOutputStream;
 import java.io.File;
@@ -53,10 +53,11 @@ public class TGMultiThreadRunner
         myDBReader.getConnection();
         myDBReader.getResultSet();
         int threadCount = (int) tgjdbccfg.run_threads;
+        TGWriterThreadRunnable[] runnables = new TGWriterThreadRunnable[threadCount];
         ArrayList<Thread> threads = new ArrayList<Thread>();
         for (int i = 0; i < threadCount; i++) {
-            Thread thr = new Thread(new TGWriterThreadRunnable(myDBReader,
-                        tgjdbccfg));
+            runnables[i] = new TGWriterThreadRunnable(myDBReader, tgjdbccfg);
+            Thread thr = new Thread(runnables[i]);
             threads.add(thr);
         }
         for (int i =  0; i < threadCount; i++) 
@@ -69,10 +70,13 @@ public class TGMultiThreadRunner
             System.out.println("Waiting for thread " + thr + " complete ..");
             thr.join();
             System.out.println("Thread " + thr + " completed");
-        }     
+        }
+        long recordCount = 0;
+        for (int i = 0; i < threadCount; i++) {
+            recordCount += runnables[i].getRecordCount();
+        }
         long timeTaken = TGWriterThreadRunnable.getEndTime() - 
-                         TGWriterThreadRunnable.getStartTime();
-        long recordCount = TGWriterThreadRunnable.getRecordCount();
+                             TGWriterThreadRunnable.getStartTime();
         System.out.println("ThreadCount: " + threadCount +", TimeTaken: " + timeTaken + 
                            " ms, RecordCount: " + recordCount);
         writeBenchMark(threadCount, timeTaken, recordCount);

@@ -9,11 +9,12 @@ import java.util.Scanner;
  */
 public class TGWriterThreadRunnable implements Runnable
 {
-    private TGJdbcReader myDBReader;
-    private JdbcTGWriter myTGWriter;
     private static long startTime = 0;
     private static long endTime = 0;
-    private static long recordCount = 0;
+
+    private TGJdbcReader myDBReader;
+    private JdbcTGWriter myTGWriter;
+    private long recordCount = 0;
 
     /**
      * Constructor for objects of class TGWriterThreadRunnable.
@@ -48,7 +49,7 @@ public class TGWriterThreadRunnable implements Runnable
                 myTGWriter.BatchPost(row_as_string);
                 //System.out.println("Posted record to TG: " + row_as_string);
                 //myDBReader.showProgress();
-                incrementRecordCount();
+                recordCount++;
             }
         }
         catch (Exception e)
@@ -65,8 +66,8 @@ public class TGWriterThreadRunnable implements Runnable
     }
 
     /**
-     * Set the current system time to the instance variable startTime if it hasn't
-     * been set already.
+     * Set the current system time to the class variable startTime
+     * if it has not been set already.
      */
     private static synchronized void recordStartTime()
     {
@@ -77,9 +78,9 @@ public class TGWriterThreadRunnable implements Runnable
     }
 
     /**
-     * Set the current system time to the instance variable endTime.
+     * Set the current system time to the class variable endTime.
      */   
-    public static synchronized void recordEndTime()
+    private static synchronized void recordEndTime()
     {
         endTime = System.currentTimeMillis();
     }
@@ -105,18 +106,11 @@ public class TGWriterThreadRunnable implements Runnable
     }
 
     /**
-     * Increments variable recordCount by one.
-     */ 
-    private static synchronized void incrementRecordCount() {
-        recordCount++;
-    }
-
-    /**
-     * Returns the numerical value of recordCount.
+     * Returns the count of records processed by this instance
      * 
      * @return the recordCount
      */ 
-    public static synchronized long getRecordCount() {
+    public long getRecordCount() {
         return recordCount;
     }
 }
